@@ -18,7 +18,7 @@ AOstring += String(analogRead(AOpin));
 DOstring = "";
 DOstring+="DOValue: ";
 DOstring += String(digitalRead(DOpin));
-//Serial.println(AOstring);
+Serial.println(AOstring);
 Serial.println(DOstring);
 delay(500);
 }

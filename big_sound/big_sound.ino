@@ -14,10 +14,11 @@ void loop() {
   // put your main code here, to run repeatedly:
 AOstring = "";
 AOstring+="AOValue: ";
-AOstring += analogRead(AOpin);
+AOstring += String(analogRead(AOpin));
 DOstring = "";
 DOstring+="DOValue: ";
-DOstring += digitalRead(AOpin);
-Serial.println(AOstring);
+DOstring += String(digitalRead(DOpin));
+//Serial.println(AOstring);
 Serial.println(DOstring);
+delay(500);
 }

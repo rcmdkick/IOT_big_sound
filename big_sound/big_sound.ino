@@ -1,3 +1,4 @@
+/*
 int AOpin = 36;
 int DOpin = 22;
 void setup() {
@@ -14,10 +15,28 @@ void loop() {
   // put your main code here, to run repeatedly:
 AOstring = "";
 AOstring+="AOValue: ";
-AOstring += analogRead(AOpin);
+AOstring += String(analogRead(AOpin));
 DOstring = "";
 DOstring+="DOValue: ";
-DOstring += digitalRead(AOpin);
+DOstring += String(digitalRead(AOpin));
 Serial.println(AOstring);
 Serial.println(DOstring);
+delay(500);
 }
+*/
+
+
+
+int  sensorPin  =  36;     // select the input  pin for  the potentiometer 
+int  ledPin  = LED_BUILTIN;   // select the pin for  the LED
+int  sensorValue =  0;  // variable to  store  the value  coming  from  the sensor
+
+void setup() {
+pinMode(ledPin,  OUTPUT);
+Serial.begin(9600);
+}
+void loop()  {
+sensorValue =  analogRead(sensorPin);
+Serial.println(sensorValue,  DEC);
+}
+

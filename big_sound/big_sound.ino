@@ -1,3 +1,5 @@
+// no additional lib. install needed
+
 int AOpin = 36;
 int DOpin = 22;
 void setup() {
